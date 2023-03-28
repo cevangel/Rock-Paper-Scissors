@@ -11,13 +11,13 @@ const computerSelection = getComputerChoice();
 function getComputerChoice(){  
   switch(Math.floor(Math.random() * 3) + 1) {
     case 1:
-      return "rock";
+      return "Rock";
       break;
     case 2:
-      return "paper";
+      return "Paper";
       break;
     case 3:
-      return "scissors";
+      return "Scissors";
       break;
     }
   }
@@ -25,7 +25,9 @@ function getComputerChoice(){
 //2. Get playerSelection: prompt user "choose Rock paper or scissors"
   //use prompt()
   //make case insensitive
-const playerSelection = prompt("Choose Rock, Paper or Scissors","")
+
+let playerString = prompt("Choose Rock, Paper or Scissors","")
+const playerSelection = playerString[0].toUpperCase() + playerString.slice(1).toLowerCase();
 console.log(playerSelection)
 
 
@@ -41,14 +43,14 @@ console.log(playerSelection)
 
 
 function playRound(playerSelection, computerSelection){
-  if ((playerSelection === "rock" && computerSelection === "rock") || 
-  (playerSelection === "scissors" && computerSelection === "scissors") ||
-  (playerSelection === "paper" && computerSelection === "paper")
+  if ((playerSelection === "Rock" && computerSelection === "Rock") || 
+  (playerSelection === "Scissors" && computerSelection === "Scissors") ||
+  (playerSelection === "Paper" && computerSelection === "Paper")
   ) {
     return "You tie! " + playerSelection + " ties with " + computerSelection + "!"
-  } else if ((playerSelection === "rock" && computerSelection === "scissors") || 
-  (playerSelection === "scissors" && computerSelection === "paper") ||
-  (playerSelection === "paper" && computerSelection === "rock")
+  } else if ((playerSelection === "Rock" && computerSelection === "Scissors") || 
+  (playerSelection === "Scissors" && computerSelection === "Paper") ||
+  (playerSelection === "Paper" && computerSelection === "Rock")
   )  {
     return "You win! " + playerSelection + " beats " + computerSelection + "!";
   } else {
