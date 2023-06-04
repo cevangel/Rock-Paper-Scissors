@@ -7,6 +7,32 @@
   <title>Document</title>
 </head>
 <body>
-  <script src="javascript.js"></script>
+  <div class="runningScore">
+    <span class="player-score"></span> <!--span bc less styling needed-->
+    <span class="computer-score"></span>
+
+  </div>
+
+  <div class="container"> <!--helps to have this-->
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissors">Scissors</button>
+  </div>
+  <div class="resultDisplay"></div>
 </body>
+<script src="./javascript.js"></script>
 </html>
+
+
+<!--5/28/23 RPS REVISITED Psuedocode below:
+//Create three buttons, one for each selection. 
+
+//X Add an event listener to the buttons that call playRound function 
+//X with the correct playerSelection every time a button is clicked. 
+//X (you can keep the console.logs for this step)
+
+// X Add a div for displaying results and 
+//change all of your console.logs into DOM methods.
+  -append?
+
+-->
